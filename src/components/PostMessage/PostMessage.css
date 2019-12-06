@@ -1,0 +1,16 @@
+.PostMessage_form{
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+#authorName {
+  margin: 10px 0 10px 5px;
+  color: rgb(72, 13, 80);
+}
+
+#message {
+  margin: 10px 0 10px 5px;
+  color: rgb(72, 13, 80);
+}

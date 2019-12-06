@@ -1,0 +1,19 @@
+body {
+  background: url(https://html5book.ru/wp-content/uploads/2015/07/background39.png);
+}
+
+.App {
+  margin: 30px auto;
+  width: 650px;
+  height: 820px;
+  border: 1px solid grey;
+  border-radius: 10px;
+  text-align: center;
+  background: linear-gradient(to right, rgba(193,191,234,1) 0%, rgba(193,191,234,1) 47%, rgba(216,208,239,1) 99%, rgba(235,233,249,1) 100%);
+}
+
+.MessagesAll {
+  margin-top: 20px;
+  overflow-y: scroll;
+  height: 650px;
+}
