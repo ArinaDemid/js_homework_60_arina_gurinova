@@ -25,9 +25,12 @@ class Message extends Component {
   }
 
   async getMessages() {
-    const response = await fetch('http://146.185.154.90:8000/messages?datetime=' + this.state.lastTime);
-    if (response.ok) {
-      const messages = await response.json();
+
+    const axios = require('axios');
+
+    const response = await axios('http://146.185.154.90:8000/messages?datetime=' + this.state.lastTime);
+    if (response.status === 200) {
+      const messages = response.data;
       if(messages.length === 0) return false;
       else {
         const messagesState = [...this.state.messages];
@@ -46,11 +49,10 @@ class Message extends Component {
 
   handleSubmit(event){ 
     event.preventDefault();
-
     let postMessage = {...this.state.postMessage};
     const axios = require('axios');
-
     const querystring = require('querystring');
+
     axios.post('http://146.185.154.90:8000/messages', 
       querystring.stringify({ 
         message: postMessage.message,
